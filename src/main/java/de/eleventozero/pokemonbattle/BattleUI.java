@@ -15,4 +15,9 @@ public class BattleUI {
 		System.out.println( );
 	}
 
+	public static void welcomeMessage(){
+		printLine();
+		System.out.println(WELCOME );
+		printLine();
+	}
 }
