@@ -1,25 +1,32 @@
 package de.eleventozero.pokemonbattle;
 
 /**
- * PokemonStats is used as a datatype for Pokemon.
+ * PokemonProfile is used as a Data-Type for Pokemon.
  */
 
-public class PokemonStats {
+public class PokemonProfile {
 
 	// Fields
-	public String name;
-	public String type;
-	public int hp;
-	public int attack;
-	public int defense;
+	private String name;
+	private String type;
+	private int maxHp;
+	private int attack;
+	private int defense;
+	//private Move[] moves;
 
 	// Constructor
-	public PokemonStats( String name, String type, int hp, int attack, int defense ) {
+	public PokemonProfile( String name, String type, int maxHp, int attack, int defense ) {
 		this.name = name;
 		this.type = type;
-		this.hp = hp;
+		this.maxHp = maxHp;
 		this.attack = attack;
 		this.defense = defense;
 	}
 
+	// Getter
+	public String getName( ) { return name; }
+	public String getType( ) { return type; }
+	public int getMaxHp( ) { return maxHp; }
+	public int getAttack( ) { return attack; }
+	public int getDefense( ) { return defense; }
 }

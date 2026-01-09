@@ -1,6 +1,6 @@
 package de.eleventozero.pokemonbattle;
 
-public class Messages {
+public class BattleUI {
 
 	// Fields
 	public static final String WELCOME = "Welcome to Pokemon Battle!";
