@@ -1,32 +1,60 @@
 package de.eleventozero.pokemonbattle;
 
 /**
- * PokemonProfile is used as a Data-Type for Pokemon.
+ * Represents immutable base data of a Pokemon.
+ * This data is loaded from the database (PokemonData).
  */
 
 public class PokemonProfile {
 
-	// Fields
-	private String name;
+	private final String name;
+	private final int maxHp;
+	private final int attack;
+	private final int defense;
 	private String type;
-	private int maxHp;
-	private int attack;
-	private int defense;
-	//private Move[] moves;
+	private final Attack[] attacks;
 
-	// Constructor
-	public PokemonProfile( String name, String type, int maxHp, int attack, int defense ) {
+	/**
+	 * Creates a new Pokemon profile.
+	 *
+	 * @param name    name of the Pokemon
+	 * @param maxHp   maximum HP value
+	 * @param attack  base attack stat
+	 * @param defense base defense stat
+	 * @param type    Pokemon type (e.g. "fire")
+	 * @param attacks array of attacks (expected size = 3)
+	 */
+	public PokemonProfile( String name, int maxHp, int attack, int defense, String type, Attack[] attacks ) {
 		this.name = name;
-		this.type = type;
 		this.maxHp = maxHp;
 		this.attack = attack;
 		this.defense = defense;
+		this.type = type;
+		this.attacks = attacks;
 	}
 
 	// Getter
-	public String getName( ) { return name; }
-	public String getType( ) { return type; }
-	public int getMaxHp( ) { return maxHp; }
-	public int getAttack( ) { return attack; }
-	public int getDefense( ) { return defense; }
+	public String getName( ) {
+		return name;
+	}
+
+	public int getMaxHp( ) {
+		return maxHp;
+	}
+
+	public int getAttack( ) {
+		return attack;
+	}
+
+	public int getDefense( ) {
+		return defense;
+	}
+
+	public String getType( ) {
+		return type;
+	}
+
+	public Attack[] getAttacks(){
+		return attacks;
+	}
 }
