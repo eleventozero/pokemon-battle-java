@@ -12,18 +12,26 @@ public class Attack {
 	/**
 	 * Creates a new attack.
 	 *
-	 * @param name   : name of the attack
-	 * @param damage : base damage value
-	 * @param type   : attack type (e.g. "fire")
+	 * @param name   name of the attack
+	 * @param damage base damage value
+	 * @param type   attack type (e.g. "fire")
 	 */
-	public Attack(String name, int damage, String type){
+	public Attack( String name, int damage, String type ) {
 		this.name = name;
 		this.damage = damage;
 		this.type = type;
 	}
 
 	// Getter
-	public String getName(){ return name;}
-	public int getDamage(){ return damage;}
-	public String getType(){ return type;}
+	public String getName( ) {
+		return name;
+	}
+
+	public int getDamage( ) {
+		return damage;
+	}
+
+	public String getType( ) {
+		return type;
+	}
 }

@@ -1,15 +1,21 @@
 package de.eleventozero.pokemonbattle;
 
+/**
+ * Represents a Pokemon object in a battle.
+ * Holds a reference to its immutable profile and mutable HP.
+ */
 public class Pokemon {
 
-	// Fields
-	private PokemonProfile profile;
-	public int currentHp;
+	private final PokemonProfile profile;
+	private int currentHp;
 
-
-	// Constructors
-	public Pokemon( int index ) {
-		this.profile = PokemonData.PROFILES[ index ];
+	/**
+	 * Creates a Pokemon form a given profile.
+	 *
+	 * @param profile base data of the Pokemon
+	 */
+	public Pokemon( PokemonProfile profile ) {
+		this.profile = profile;
 		this.currentHp = profile.getMaxHp( );
 	}
 
@@ -18,8 +24,8 @@ public class Pokemon {
 		return profile.getName( );
 	}
 
-	public String getType( ) {
-		return profile.getType( );
+	public int getCurrentHp( ) {
+		return currentHp;
 	}
 
 	public int getMaxHp( ) {
@@ -32,5 +38,19 @@ public class Pokemon {
 
 	public int getDefense( ) {
 		return profile.getDefense( );
+	}
+
+	public String getType( ) {
+		return profile.getType( );
+	}
+
+	/**
+	 * Updates HP while ensuring it does not fall below zero.
+	 */
+	public void setHP(int hp){
+		this.currentHp = Math.max(0, hp);
+	}
+	public boolean isFainted(){
+		return currentHp <= 0;
 	}
 }
