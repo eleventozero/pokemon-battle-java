@@ -44,10 +44,14 @@ public class Pokemon {
 		return profile.getType( );
 	}
 
+	public Attack[] getAttacks(){
+		return profile.getAttacks();
+	}
+
 	/**
 	 * Updates HP while ensuring it does not fall below zero.
 	 */
-	public void setHP(int hp){
+	public void setCurrentHp(int hp){
 		this.currentHp = Math.max(0, hp);
 	}
 	public boolean isFainted(){
