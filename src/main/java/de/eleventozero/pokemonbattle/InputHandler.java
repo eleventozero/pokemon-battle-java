@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 public class InputHandler {
 
-	private final Scanner SCANNER = new Scanner( System.in );
+	private final Scanner SCANNER;
+
+	public InputHandler() {
+		this.SCANNER = new Scanner( System.in);
+	}
 
 	/**
 	 * Reads an integer input from the user within a specified range.

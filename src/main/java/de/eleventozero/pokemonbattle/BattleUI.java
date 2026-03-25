@@ -1,23 +1,12 @@
 package de.eleventozero.pokemonbattle;
 
+/**
+ * Handles the console-base battle user interface.
+ * Responsible for displaying battle information, reading player choices,
+ * and running the battle loop.
+ */
 public class BattleUI {
 
-	// Fields
-	public static final String WELCOME = "Welcome to Pokemon Battle!";
-	public static final String END_WIN = "You defeated Pokemon Trainer Java.";
-	public static final String END_LOOSE = "You lost the battle.";
+	private final InputHandler INPUTHANDLER;
 
-	// Methods
-	public static void printLine( ) {
-		for ( int i = 0; i < 30; i++ ) {
-			System.out.print( "-" );
-		}
-		System.out.println( );
-	}
-
-	public static void welcomeMessage(){
-		printLine();
-		System.out.println(WELCOME );
-		printLine();
-	}
 }
