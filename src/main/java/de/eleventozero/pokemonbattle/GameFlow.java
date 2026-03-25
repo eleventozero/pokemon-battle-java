@@ -26,12 +26,12 @@ public class GameFlow {
 	/**
 	 * Executes one turn of the game loop.
 	 */
-	public void turn(){
+	public void turn(int playerAttackIndex){
 
 		if (gameover) return;
 
 		if (playerTurn) {
-			executePlayerTurn();
+			executePlayerTurn(playerAttackIndex);
 
 			// Check if enemy fainted.
 			if (enemy.getActivePokemon().isFainted()){
@@ -52,12 +52,10 @@ public class GameFlow {
 		playerTurn = !playerTurn;
 	}
 
-	private void executePlayerTurn(){
+	private void executePlayerTurn(int attackIndex){
 
 		Pokemon attacker = player.getActivePokemon();
 		Pokemon defender = enemy.getActivePokemon();
-
-		int attackIndex = getPlayerChoice(); // external input
 
 		Battle.applyAttack(attacker, defender, attackIndex);
 	}
