@@ -39,7 +39,7 @@ public class GameFlow {
 				return;
 			}
 		} else {
-			executeEnemyTurn()
+			executeEnemyTurn();
 
 			// Check if player is fainted.
 			if (player.getActivePokemon().isFainted()){
@@ -52,7 +52,7 @@ public class GameFlow {
 		playerTurn = !playerTurn;
 	}
 
-	public void executePlayerTurn(){
+	private void executePlayerTurn(){
 
 		Pokemon attacker = player.getActivePokemon();
 		Pokemon defender = enemy.getActivePokemon();
@@ -66,12 +66,12 @@ public class GameFlow {
 	 * Executes enemy's turn.
 	 * Chooses a random attack.
 	 */
-	public void executeEnemyTurn(){
+	private void executeEnemyTurn(){
 
 		Pokemon attacker = enemy.getActivePokemon();
 		Pokemon defender = player.getActivePokemon();
 
-		int attackIndex = (int) Math.random() * 3;
+		int attackIndex = (int) ( Math.random() * 3 );
 
 		Battle.applyAttack(attacker, defender, attackIndex);
 	}
