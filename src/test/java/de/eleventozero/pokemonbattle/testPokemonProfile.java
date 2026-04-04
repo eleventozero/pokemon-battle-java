@@ -19,10 +19,10 @@ public class testPokemonProfile {
 				attacks );
 
 		assertEquals( "Pikachu", pp.getName() );
-		assertEquals( 35, pp.getMaxHp());
-		assertEquals( 55, pp.getAttack());
-		assertEquals( 44, pp.getDefense());
-		assertEquals( "electric", pp.getType());
+		assertEquals( 35, pp.getMaxHp() );
+		assertEquals( 55, pp.getAttack() );
+		assertEquals( 44, pp.getDefense() );
+		assertEquals( "electric", pp.getType() );
 		assertArrayEquals( attacks, pp.getAttacks() );
 	}
 }

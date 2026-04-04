@@ -34,27 +34,27 @@ public class PokemonProfile {
 	}
 
 	// Getter
-	public String getName( ) {
+	public String getName() {
 		return name;
 	}
 
-	public int getMaxHp( ) {
+	public int getMaxHp() {
 		return maxHp;
 	}
 
-	public int getAttack( ) {
+	public int getAttack() {
 		return attack;
 	}
 
-	public int getDefense( ) {
+	public int getDefense() {
 		return defense;
 	}
 
-	public String getType( ) {
+	public String getType() {
 		return type;
 	}
 
-	public Attack[] getAttacks(){
+	public Attack[] getAttacks() {
 		return attacks;
 	}
 }
