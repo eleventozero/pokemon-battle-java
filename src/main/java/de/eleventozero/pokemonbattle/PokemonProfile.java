@@ -11,7 +11,7 @@ public class PokemonProfile {
 	private final int maxHp;
 	private final int attack;
 	private final int defense;
-	private String type;
+	private final String type;
 	private final Attack[] attacks;
 
 	/**
