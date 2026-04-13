@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-public class testPokemonProfile {
+public class TestPokemonProfile {
 
 	@Test
 	public void testPokemonProfile_Constructor_Success() {
