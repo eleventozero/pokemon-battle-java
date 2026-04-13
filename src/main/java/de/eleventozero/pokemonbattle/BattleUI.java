@@ -45,9 +45,9 @@ public class BattleUI {
 		Pokemon enemyPokemon = gameFlow.getEnemy().getActivePokemon();
 
 		System.out.println( "Player: " + playerPokemon.getName()
-				+ " | HP: " + playerPokemon.getCurrentHp() );
+				+ " | HP: " + playerPokemon.getCurrentHp() + "/" + playerPokemon.getMaxHp());
 		System.out.println( "Enemy: " + enemyPokemon.getName()
-				+ " | HP: " + enemyPokemon.getCurrentHp() );
+				+ " | HP: " + enemyPokemon.getCurrentHp() + "/" + enemyPokemon.getMaxHp());
 		System.out.println();
 	}
 
@@ -56,27 +56,27 @@ public class BattleUI {
 	 *
 	 * @param pokemon active player Pokemon
 	 */
-	private void showAttacks(Pokemon pokemon){
-		System.out.println("Choose an attack:");
+	private void showAttacks( Pokemon pokemon ) {
+		System.out.println( "Choose an attack:" );
 
 		Attack[] attacks = pokemon.getAttacks();
 
-		for (int i = 0; i < attacks.length; i++){
-			System.out.println(i + " - " + attacks[i].getName());
+		for ( int i = 0; i < attacks.length; i++ ) {
+			System.out.println( i + " - " + attacks[ i ].getName() );
 		}
 	}
 
-	private int askPlayerForAttack(Pokemon pokemon){
-		int maxIndex = pokemon.getAttacks().length -1;
-		System.out.print("> ");
-		return INPUTHANDLER.readIntInRange(0, maxIndex);
+	private int askPlayerForAttack( Pokemon pokemon ) {
+		int maxIndex = pokemon.getAttacks().length - 1;
+		System.out.print( "> " );
+		return INPUTHANDLER.readIntInRange( 0, maxIndex );
 	}
 
-	private void showWinner(GameFlow gameFlow) {
-		if (gameFlow.getEnemy().getActivePokemon().isFainted()) {
-			System.out.println("Congratulations, you win!");
+	private void showWinner( GameFlow gameFlow ) {
+		if ( gameFlow.getEnemy().getActivePokemon().isFainted() ) {
+			System.out.println( "Congratulations, you win!" );
 		} else {
-			System.out.println("You were defeated!");
+			System.out.println( "You were defeated!" );
 		}
 	}
 }

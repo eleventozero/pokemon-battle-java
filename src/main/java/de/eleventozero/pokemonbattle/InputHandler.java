@@ -32,6 +32,7 @@ public class InputHandler {
 				System.out.println("> ");
 			} else {
 				System.out.println("Invalid input. Enter a number.");
+				System.out.println("> ");
 				SCANNER.next();
 			}
 		}

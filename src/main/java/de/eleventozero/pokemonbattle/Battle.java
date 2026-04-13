@@ -33,7 +33,7 @@ public class Battle {
 		// Type effectiveness
 		double effectiveness = typeMultiplier(attack.getType(), defender.getType());
 
-		// Random factor between -0.7 and 1.3
+		// Random factor between 0.7 and 1.3
 		double random = (7 + Math.random() * 6) / 10.0;
 
 		// Final damage

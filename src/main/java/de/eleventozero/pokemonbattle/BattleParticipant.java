@@ -7,22 +7,27 @@ package de.eleventozero.pokemonbattle;
 
 public class BattleParticipant {
 
-	private Pokemon activePokemon;
+	private final Pokemon[] team;
+	private int activeIndex;
 
-	public BattleParticipant(Pokemon activePokemon){
-		this.activePokemon = activePokemon;
+	public BattleParticipant(Pokemon[] team){
+		this.team = team;
+		this.activeIndex = 0;
 	}
 
-	// Getter
 	public Pokemon getActivePokemon(){
-		return activePokemon;
+		return team[activeIndex];
 	}
 
-	// Setter
-	public void setActivePokemon(Pokemon activePokemon){
-		this.activePokemon = activePokemon;
+	public Pokemon[] getTeam() {
+		return team;
 	}
 
-
-
+	public int getActiveIndex() {
+		return activeIndex;
+	}
+	public boolean hasRemainingPokemon() {
+		for (Pokemon p : team ) {
+		} }
 }
+

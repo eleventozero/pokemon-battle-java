@@ -49,7 +49,7 @@ public class PokemonData {
 			return new PokemonProfile( name, base_hp, base_attack, base_defense, type, attacks );
 
 		} catch ( SQLException e ) {
-			throw new RuntimeException( e );
+			throw new RuntimeException( "Failed to load Pokemon with id: " + id,  e );
 		}
 	}
 
