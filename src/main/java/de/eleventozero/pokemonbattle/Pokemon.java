@@ -10,42 +10,13 @@ public class Pokemon {
 	private int currentHp;
 
 	/**
-	 * Creates a Pokemon form a given profile.
+	 * Creates a Pokemon from a given profile.
 	 *
 	 * @param profile base data of the Pokemon
 	 */
 	public Pokemon( PokemonProfile profile ) {
 		this.profile = profile;
-		this.currentHp = profile.getMaxHp( );
-	}
-
-	// Getter
-	public String getName( ) {
-		return profile.getName( );
-	}
-
-	public int getCurrentHp( ) {
-		return currentHp;
-	}
-
-	public int getMaxHp( ) {
-		return profile.getMaxHp( );
-	}
-
-	public int getAttack( ) {
-		return profile.getAttack( );
-	}
-
-	public int getDefense( ) {
-		return profile.getDefense( );
-	}
-
-	public String getType( ) {
-		return profile.getType( );
-	}
-
-	public Attack[] getAttacks(){
-		return profile.getAttacks();
+		this.currentHp = profile.getMaxHp();
 	}
 
 	/**
@@ -54,7 +25,38 @@ public class Pokemon {
 	public void setCurrentHp(int hp){
 		this.currentHp = Math.max(0, hp);
 	}
+
 	public boolean isFainted(){
 		return currentHp <= 0;
 	}
+
+	// Getter
+	public String getName() {
+		return profile.getName();
+	}
+
+	public int getCurrentHp() {
+		return currentHp;
+	}
+
+	public int getMaxHp() {
+		return profile.getMaxHp();
+	}
+
+	public int getAttack() {
+		return profile.getAttack();
+	}
+
+	public int getDefense() {
+		return profile.getDefense();
+	}
+
+	public String getType() {
+		return profile.getType();
+	}
+
+	public Attack[] getAttacks() {
+		return profile.getAttacks();
+	}
+
 }
