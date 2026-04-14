@@ -12,6 +12,9 @@ public class PokemonData {
 
 	/**
 	 * Loads a PokemonProfile by its id.
+	 *
+	 * @param id the Pokemon id
+	 * @return the loaded PokemonProfile
 	 */
 	public static PokemonProfile loadPokemon( int id ) {
 
@@ -55,6 +58,10 @@ public class PokemonData {
 
 	/**
 	 * Loads all attacks assigned to a Pokemon.
+	 *
+	 * @param conn the active database connection
+	 * @param pokemonId the Pokemon id
+	 * @return an array of attacks
 	 */
 	private static Attack[] loadAttacks( Connection conn, int pokemonId ) {
 
@@ -88,5 +95,71 @@ public class PokemonData {
 			// Convert checked into unchecked Exception for simpler handling.
 			throw new RuntimeException( "Failed to load attacks for Pokemon Id: " + pokemonId, e );
 		}
+	}
+
+	/**
+	 * Loads all Pokemon ids from the database.
+	 *
+	 * @return an array containing all Pokemon ids
+	 */
+	public static int[] loadAllPokemonIds() {
+
+		String countSql = "SELECT COUNT(*) FROM POKEMON";
+		String idsSql = "SELECT id FROM POKEMON";
+
+		try (Connection conn = DriverManager.getConnection(DB_URL);
+			 PreparedStatement countStmt = conn.prepareStatement(countSql);
+			 PreparedStatement idsStmt = conn.prepareStatement(idsSql)) {
+
+			ResultSet countRs = countStmt.executeQuery();
+			int count = countRs.getInt(1);
+
+			int[] ids = new int[count];
+			int index = 0;
+
+			ResultSet idsRs = idsStmt.executeQuery();
+
+			// Copy all ids into the array.
+			while (idsRs.next()) {
+				ids[index++] = idsRs.getInt("id");
+			}
+
+			return ids;
+
+		} catch (SQLException e) {
+			throw new RuntimeException("Failed to load Pokemon ids.", e);
+		}
+	}
+
+	/**
+	 * Loads a random Pokemon team without duplicates.
+	 *
+	 * @param size number of Pokemon in the team
+	 * @return an array of randomly selected Pokemon
+	 */
+	public static Pokemon[] loadRandomPokemonTeam(int size) {
+
+		int[] allIds = loadAllPokemonIds();
+
+		if (size > allIds.length) {
+			throw new RuntimeException("Not enough Pokemon in database for a team of size " + size);
+		}
+
+		Pokemon[] team = new Pokemon[size];
+		boolean[] used = new boolean[allIds.length];
+
+		for (int i = 0; i < size; i++) {
+			int randomIndex;
+
+			// Keep rolling until an unused Pokemon id is found.
+			do {
+				randomIndex = (int) (Math.random() * allIds.length);
+			} while (used[randomIndex]);
+
+			used[randomIndex] = true;
+			team[i] = new Pokemon(loadPokemon(allIds[randomIndex]));
+		}
+
+		return team;
 	}
 }

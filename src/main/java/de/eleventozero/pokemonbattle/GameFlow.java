@@ -92,6 +92,23 @@ public class GameFlow {
 	}
 
 	/**
+	 * Forces the player to switch Pokemon after a KO.
+	 * <p>
+	 * This switch does NOT end the player's turn.
+	 *
+	 * @param newIndex index of the Pokemon to switch to
+	 * @return true if the switch was successful, otherwise false
+	 */
+	public boolean forcePlayerSwitch(int newIndex) {
+
+		if (gameOver) {
+			return false;
+		}
+
+		return player.switchPokemon(newIndex);
+	}
+
+	/**
 	 * Executes the enemy's turn.
 	 * <p>
 	 * The enemy always uses a random attack.
