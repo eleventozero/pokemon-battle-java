@@ -12,4 +12,4 @@ This document describes the architecture of the Pokemon Battle Java project.
 
 ## Class Diagram
 
-(class-diagram.png)
+![Class Diagram](class-diagram.png)
