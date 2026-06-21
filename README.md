@@ -1,28 +1,41 @@
 # 🐉 Pokemon Battle (Java)
+---
+# MVP
+✅ An object-oriented Pokémon battle system implemented in **Java** <br>
+✅ The project follows a **classic OOP design**
 
-An object-oriented Pokémon battle system implemented in **Java**.  
-The project follows a **classic OOP design**, using encapsulated state and interacting objects.
-
-It is the counterpart to the functional Racket version:
-https://github.com/eleventozero/pokemon-battle-racket
+---
 
 The goal was to implement the same idea twice:
-- once in a functional style (Racket)
-- once in an object-oriented style (Java)
+- once in a **functional** style - (Racket) https://github.com/eleventozero/pokemon-battle-racket
+- once in an **object-oriented** style - (Java)
 
 ---
 
-## ✨ Features
+## ❗AI Assistance
 
-- ⚔️ Turn-based battle system (Player vs Enemy)
-- 🧱 Object-oriented state management (encapsulation & mutation)
-- 🧠 Type effectiveness system (Gen 1 inspired)
-- 💾 SQLite database integration
-- 🧩 Modular architecture (Data, DB, Logic, UI)
+AI tools were used to support project planning, code reviews, refactoring, and documentation. <br>
+The final implementation, design decisions, and project structure were reviewed and validated by myself.
 
 ---
 
-## 🖼️ Screenshots
+## Features
+
+- Turn-based battle system (Player vs Enemy)
+- Object-oriented state management (encapsulation & mutation)
+- Type effectiveness system (Gen 1 inspired)
+- SQLite database integration
+- Modular architecture (Data, DB, Logic, UI)
+
+---
+
+## Architectur
+- ![architectur.md](/docs/architecture.md)
+- 
+
+---
+
+## Screenshots
 
 ### Main Menu
 <img width="507" height="478" alt="grafik" src="https://github.com/user-attachments/assets/7380058d-ca53-4693-a7ba-c0cae8e1dd80" />
@@ -35,7 +48,7 @@ The goal was to implement the same idea twice:
 
 ---
 
-## 📦 Data Model
+## Data Model
 
 ### PokemonProfile
 
@@ -81,7 +94,7 @@ The goal was to implement the same idea twice:
 
 ---
 
-## 📌 Future Improvements
+## Future Improvements
 
 - Status effects (poison, burn, etc.)
 - Improved enemy AI (strategy instead of random)
@@ -98,3 +111,5 @@ This project is designed as a learning system to explore:
 - Clean architecture and separation of concerns
 - Game logic implementation
 - Database integration with SQLite
+---
+Any feedback, suggestions, or criticism are highly appreciated.
