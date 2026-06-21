@@ -31,7 +31,7 @@ The final implementation, design decisions, and project structure were reviewed 
 
 ## Architectur
 - ![architectur.md](/docs/architecture.md)
-- 
+- ![classdiagram](/docs/class-diagram.png)
 
 ---
 
