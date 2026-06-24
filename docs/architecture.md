@@ -8,4 +8,4 @@
 
 ## Class Diagram
 
-![Class Diagram](class-diagram3.drawio.png)
+![Class Diagram](class-diagram2.drawio.png)
