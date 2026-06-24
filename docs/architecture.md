@@ -1,6 +1,10 @@
 # Architecture
 
 ---
+## Component Diagram
+![Component Diagram](component-diagram.drawio.png)
+
+---
 
 ## Class Diagram
 
