@@ -4,4 +4,4 @@
 
 ## Class Diagram
 
-![Class Diagram](class-diagram-trans.png)
+![Class Diagram](class-diagram3.drawio.png)
