@@ -2,7 +2,7 @@
 
 ---
 ## Component Diagram
-![Component Diagram](component-diagram.drawio.png)
+![Component Diagram](pokemon-component-diagram.drawio.png)
 
 ---
 
