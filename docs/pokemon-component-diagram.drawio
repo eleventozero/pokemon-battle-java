@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="PizYY43NCI1ggH8KVUrb">
-    <mxGraphModel dx="1549" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1527" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -43,10 +43,10 @@
         <mxCell id="QePiq8B7hMwe2jFe5RBS-51" edge="1" parent="1" source="QePiq8B7hMwe2jFe5RBS-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" target="QePiq8B7hMwe2jFe5RBS-39" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="QePiq8B7hMwe2jFe5RBS-45" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;fillColor=#99CCFF;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Domain&lt;/b&gt;&lt;/div&gt;&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&amp;nbsp; Attack&lt;/div&gt;&lt;div&gt;&amp;nbsp; PokemonProfile&lt;/div&gt;&lt;div&gt;&amp;nbsp; Pokemon&lt;/div&gt;&lt;div&gt;&amp;nbsp; Battle&lt;/div&gt;&lt;div&gt;&amp;nbsp; BattleParticipant&lt;/div&gt;" vertex="1">
+        <mxCell id="QePiq8B7hMwe2jFe5RBS-45" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;fillColor=#CCE5FF;" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Domain&lt;/b&gt;&lt;/div&gt;&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&amp;nbsp; Attack&lt;/div&gt;&lt;div&gt;&amp;nbsp; PokemonProfile&lt;/div&gt;&lt;div&gt;&amp;nbsp; Pokemon&lt;/div&gt;&lt;div&gt;&amp;nbsp; Battle&lt;/div&gt;&lt;div&gt;&amp;nbsp; BattleParticipant&lt;/div&gt;" vertex="1">
           <mxGeometry height="120" width="160" x="440" y="300" as="geometry" />
         </mxCell>
-        <mxCell id="QePiq8B7hMwe2jFe5RBS-46" parent="QePiq8B7hMwe2jFe5RBS-45" style="shape=component;jettyWidth=8;jettyHeight=4;fillColor=#99CCFF;" value="" vertex="1">
+        <mxCell id="QePiq8B7hMwe2jFe5RBS-46" parent="QePiq8B7hMwe2jFe5RBS-45" style="shape=component;jettyWidth=8;jettyHeight=4;fillColor=#CCE5FF;" value="" vertex="1">
           <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
             <mxPoint x="-24" y="4" as="offset" />
           </mxGeometry>
